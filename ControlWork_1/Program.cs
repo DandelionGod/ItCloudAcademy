@@ -30,6 +30,7 @@ namespace ControlWork_1
 			string nameCity = null;
 			int maxPop = 0;
 			SplitCity(result, cities);
+
 			for (int i = 0; i < result.Length - 1; i++)
 			{
 				if (cities[i].Pop < cities[i + 1].Pop)
@@ -38,20 +39,28 @@ namespace ControlWork_1
 					nameCity = cities[i + 1].Name;
 				}
 			}
+
 			Console.WriteLine($"Most populated: {nameCity} ({maxPop}) people");
+
+			for (int i = 0; i < result.Length - 1; i++)
+			{
+				if (cities[i].Name.Length < cities[i + 1].Name.Length)
+				{
+					int longest = cities[i + 1].Name.Length;
+					Console.WriteLine($"Longest name: {cities[i + 1].Name}({longest} letters)");
+				}
+
+			}
+
 			Console.WriteLine("Density: ");
-			double den = 0.00;
 			for (int i = 0; i < result.Length; i++)
 			{
 				double d1 = Convert.ToDouble(cities[i].Pop);
 				double d2 = Convert.ToDouble(cities[i].Den);
-				den = d1 / d2;
+				double den = d1 / d2;
 				var str = string.Format("{0:0.##}", den);
 				Console.WriteLine($"	{cities[i].Name} - {str}");
 			}
-
-			//int.Parse("1431000");
-
 
 			Console.ReadKey();
 		}
