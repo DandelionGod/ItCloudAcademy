@@ -26,34 +26,45 @@ namespace ControlWork_1
 			//string str = Console.ReadLine();
 			string[] result = text.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
 
-			//string[] result = str.Split(';');
 			City[] cities = new City[result.Length];
-
-			NewMethod(result, cities);
+			string nameCity = null;
+			int maxPop = 0;
+			SplitCity(result, cities);
+			for (int i = 0; i < result.Length - 1; i++)
+			{
+				if (cities[i].Pop < cities[i + 1].Pop)
+				{
+					maxPop = cities[i + 1].Pop;
+					nameCity = cities[i + 1].Name;
+				}
+			}
+			Console.WriteLine($"Most populated: {nameCity} ({maxPop}) people");
+			Console.WriteLine("Density: ");
+			double den = 0.00;
 			for (int i = 0; i < result.Length; i++)
 			{
-
+				double d1 = Convert.ToDouble(cities[i].Pop);
+				double d2 = Convert.ToDouble(cities[i].Den);
+				den = d1 / d2;
+				var str = string.Format("{0:0.##}", den);
+				Console.WriteLine($"	{cities[i].Name} - {str}");
 			}
 
 			//int.Parse("1431000");
 
 
-
 			Console.ReadKey();
 		}
 
-		private static void NewMethod(string[] result, City[] cities)
+		private static void SplitCity(string[] result, City[] cities)
 		{
 			for (int i = 0; i < result.Length; i++)
 			{
-
-
 				string[] nameSplit = result[i].Split('=');
 				string[] valueSplit = nameSplit[1].Split(',');
 				cities[i].Name = nameSplit[0];
 				cities[i].Pop = int.Parse(valueSplit[0]);
 				cities[i].Den = int.Parse(valueSplit[1]);
-
 			}
 		}
 	}
