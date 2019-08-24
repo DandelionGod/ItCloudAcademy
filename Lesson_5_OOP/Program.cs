@@ -21,10 +21,10 @@ namespace Lesson_5_OOP
 
 		public int Age
 		{
-			get { return _age; }
+			get => _age;
 			set { if (value >= 0) Age = value; }
 		}
-		
+
 
 		public void Voice()
 		{
