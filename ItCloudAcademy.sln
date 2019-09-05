@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_1_FirstProject", "Lesson1\Lesson_1_FirstProject.csproj", "{5F567B2C-027F-44B4-84BE-6E93217C827A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_01_FirstProject", "Lesson1\Lesson_01_FirstProject.csproj", "{5F567B2C-027F-44B4-84BE-6E93217C827A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_2_DataTypes", "Lesson_2_DataTypes\Lesson_2_DataTypes.csproj", "{25A424EB-2630-4700-B5D3-B6474A42BAA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_02_DataTypes", "Lesson_2_DataTypes\Lesson_02_DataTypes.csproj", "{25A424EB-2630-4700-B5D3-B6474A42BAA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_3_Arrays", "Lesson_3_Arrays\Lesson_3_Arrays.csproj", "{787FFEF4-CE91-45FA-923F-9CFEE75AFDAB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_03_Arrays", "Lesson_3_Arrays\Lesson_03_Arrays.csproj", "{787FFEF4-CE91-45FA-923F-9CFEE75AFDAB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlWork_1", "ControlWork_1\ControlWork_1.csproj", "{01768F99-324F-42D8-A231-91989449822A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_4", "Lesson_4\Lesson_4.csproj", "{0A22909E-B307-4CAF-847A-72BA4B28960F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_04", "Lesson_4\Lesson_04.csproj", "{0A22909E-B307-4CAF-847A-72BA4B28960F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_5_OOP", "Lesson_5_OOP\Lesson_5_OOP.csproj", "{026A2741-63E2-4CCD-A2D6-2A0613793D6B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_05_OOP", "Lesson_5_OOP\Lesson_05_OOP.csproj", "{026A2741-63E2-4CCD-A2D6-2A0613793D6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_6_Classes", "Lesson_6_Classes\Lesson_6_Classes.csproj", "{2246E92B-6630-42A5-8014-05E90F5FB977}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_06_Classes", "Lesson_6_Classes\Lesson_06_Classes.csproj", "{2246E92B-6630-42A5-8014-05E90F5FB977}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_10_MyCollections", "Lesson_10_BinaryTree\Lesson_10_MyCollections.csproj", "{2C88C554-B28A-4406-93D0-CF2DBC65B059}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{2246E92B-6630-42A5-8014-05E90F5FB977}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2246E92B-6630-42A5-8014-05E90F5FB977}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2246E92B-6630-42A5-8014-05E90F5FB977}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C88C554-B28A-4406-93D0-CF2DBC65B059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C88C554-B28A-4406-93D0-CF2DBC65B059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C88C554-B28A-4406-93D0-CF2DBC65B059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C88C554-B28A-4406-93D0-CF2DBC65B059}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
