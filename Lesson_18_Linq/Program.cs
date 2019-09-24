@@ -55,16 +55,35 @@ namespace Lesson_18_Linq
 						"Leonardo DiCaprio"
 					};
 
+			// ***Level***
+			//Console.WriteLine(string.Join(", ", Enumerable.Range(10, 41)));
+			//Console.WriteLine(string.Join(", ", Enumerable.Range(10, 41).Where((i) => i % 3 == 0)));
+			//Console.WriteLine(string.Concat(Enumerable.Repeat("LINQ", 10)));
+			//Console.WriteLine(string.Join(", ", "aaa;abb;ccc;dap".Split(';').Where(str => str.Contains('a'))));
+			//Console.WriteLine(string.Join(", ", "aaa;abb;ccc;dap".Split(';').Where(str => str.Contains('a')).Select(str => str.Count(letter => letter == 'a'))));
+			//Console.WriteLine(string.Join(", ", "aaa;xabbx;abb;ccc;dap".Split(';').Select(str => str.Contains("abb"))));
+			//Console.WriteLine(string.Join(", ", "aaa;xabbx;abb;ccc;dap".Split(';').First(str => str.Length == "aaa;xabbx;abb;ccc;dap".Split(';').Max(s => s.Length))));
+			//Console.WriteLine(string.Join(", ", "aaa;xabbx;abb;ccc;dap".Split(';').Average(str => str.Length)));
+			//Console.WriteLine(string.Join(", ", "aaa;xabbx;abb;ccc;dap;zh".Split(';').First(str => str.Length == "aaa;xabbx;abb;ccc;dap;zh".Split(';').Min(s => s.Length)).Reverse()));
+			//Console.WriteLine(string.Join(", ", "baaa;aabb;xabbx;abb;ccc;dap;zh".Split(';').First(str => str.StartsWith("aa")).All(ch => ch == 'a')));
+			//Console.WriteLine(string.Join(", ", "baaa;aabb;xabbx;abb;ccc;dap;zh".Split(';').Last(str => str.EndsWith("bb"))));
 
-			Console.WriteLine(string.Join(", ", Enumerable.Range(10, 41)));
-			Console.WriteLine(string.Join(", ", Enumerable.Range(10, 41).Where((i) => i % 3 == 0)));
-			Console.WriteLine(string.Concat(Enumerable.Repeat("LINQ", 10)));
-			Console.WriteLine(string.Join(", ", "aaa;abb;ccc;dap".Split(';').Where(str => str.Contains('a'))));
-			Console.WriteLine(string.Join(", ", "aaa;abb;ccc;dap".Split(';').Where(str => str.Contains('a')).Select(str => str.Count(letter => letter == 'a'))));
-			Console.WriteLine(string.Join(", ", "aaa;xabbx;abb;ccc;dap".Split(';').Select(str => str.Contains("abb"))));
-			Console.WriteLine(string.Join(", ", "aaa;xabbx;abb;ccc;dap".Split(';').Select(str => str.)));
+			//***Level2***
+			//Console.WriteLine(data.Except(data.OfType<ArtObject>()));
+			//Console.WriteLine(string.Join(", ", data.OfType<Film>().SelectMany(f => f.Actors).Select(a => a.Name)));
+			//Console.WriteLine(string.Join(", ", data.OfType<Film>().SelectMany(f => f.Actors, (f, a) => a.Birthdate.Month == 8).Distinct().Count()));
+			//Console.WriteLine(string.Join(", ", data.OfType<Film>().SelectMany(f => f.Actors).OrderBy(f => f.Birthdate).Select(n => n.Name).Take(2)));
+			//Console.WriteLine(string.Join(", ", data.OfType<Book>().GroupBy(a => a.Author).Select(gr => $"{gr.Key}: {gr.Count()}")));
+			//Console.WriteLine(string.Join(", ", data.OfType<Book>().GroupBy(a => a.Author).Select(gr => $"{gr.Key}: {gr.Count()}").Concat(data.OfType<Film>().GroupBy(f => f.Actors).Select(gr => $"{gr.Key}: {gr.Count()}"))));
 
-			Console.WriteLine();
+
+			//Console.WriteLine(string.Join(",", data.OfType<Film>().SelectMany(f => f.Actors, (f, a) => a.Name).SelectMany(n => n).Where(c => c != ' ').Distinct().Count()));
+			//Console.WriteLine(string.Join(",", data.OfType<Book>().OrderBy(n => n.Author).ThenBy(b => b.Name).Select(gr => $"{gr.Name}")));
+			//Console.WriteLine(string.Join("\n", data.OfType<Film>().SelectMany(f => f.Actors).GroupBy(a => a.Name, actor => data.OfType<Film>().Where(film => film.Actors.Contains(actor)).Select(f => f.Name))));
+			//Console.WriteLine(string.Join(",", data.OfType<Book>().Sum(Book => Book.Pages) + data.OfType<IEnumerable<int>>().Sum(a => a.Sum())));
+			//Console.WriteLine(string.Join(",", data.OfType<Book>().GroupBy(a => a.Author).Select(gr => $"{gr.Key}").Concat(data.OfType<Book>().ToLookup(b => b.Name).Select(gr => $"{gr.Key}"))));
+			//Console.WriteLine(string.Join(",", data.OfType<Film>().Where(a => a.Actors.Any(n => n.Name == "Matt Damon") && a.Actors.All(act => !data.OfType<string>().Contains(act.Name))).Select(a => a.Name)));
+
 
 			Console.ReadKey();
 		}
