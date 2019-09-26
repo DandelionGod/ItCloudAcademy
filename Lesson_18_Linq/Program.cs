@@ -7,6 +7,13 @@ using System.Threading.Tasks;
 
 namespace Lesson_18_Linq
 {
+	class Director
+	{
+		public string Name { get; set; }
+		public DateTime Birthdate { get; set; }
+		public string Country { get; set; } 
+	}
+
 	class Actor
 	{
 		public string Name { get; set; }
@@ -25,6 +32,7 @@ namespace Lesson_18_Linq
 
 		public int Length { get; set; }
 		public IEnumerable<Actor> Actors { get; set; }
+
 	}
 	class Book : ArtObject
 	{
@@ -84,6 +92,26 @@ namespace Lesson_18_Linq
 			//Console.WriteLine(string.Join(",", data.OfType<Book>().GroupBy(a => a.Author).Select(gr => $"{gr.Key}").Concat(data.OfType<Book>().ToLookup(b => b.Name).Select(gr => $"{gr.Key}"))));
 			//Console.WriteLine(string.Join(",", data.OfType<Film>().Where(a => a.Actors.Any(n => n.Name == "Matt Damon") && a.Actors.All(act => !data.OfType<string>().Contains(act.Name))).Select(a => a.Name)));
 
+			List<Film> films = new List<Film>()
+			{
+				new Film{Name = "", Director = "Jonathan Demme"},
+				new Film{Name = "", Diretor = ""},
+
+				new Film{Name = "", Director = ""},
+			};
+			List<Director> directors = new List<Director>()
+			{
+				new Director {Name = "Jonathan Demme", Country = "USA"},
+				new Director {Name = "Roger Donaldson", Country = "New Zeland"},
+			};
+
+			var result = from film in films
+						 join dir in directors
+						 on film.Director equals dir.Name into dirr
+						 from dd in dirr
+						 let tmp = dd.Country
+						 where dd.Name == "Rogar Donaldson" && tmp == dd.Country
+						 select new { dd.Name, dd.Country, FName = film.Name };
 
 			Console.ReadKey();
 		}
