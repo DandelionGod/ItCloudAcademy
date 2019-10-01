@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_20_Exceptions", "Les
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_21_IO", "Lesson_21_IO\Lesson_21_IO.csproj", "{172EB254-F86C-4732-BFD9-A80522074E5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_22_FileManager", "Lesson_22_FileManager\Lesson_22_FileManager.csproj", "{A6264240-21E4-4C91-9F2D-C7FB75E58980}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{172EB254-F86C-4732-BFD9-A80522074E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{172EB254-F86C-4732-BFD9-A80522074E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{172EB254-F86C-4732-BFD9-A80522074E5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6264240-21E4-4C91-9F2D-C7FB75E58980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6264240-21E4-4C91-9F2D-C7FB75E58980}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6264240-21E4-4C91-9F2D-C7FB75E58980}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6264240-21E4-4C91-9F2D-C7FB75E58980}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

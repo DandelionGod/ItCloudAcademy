@@ -38,7 +38,13 @@ namespace Lesson_21_IO
 			//	fileStream.Write(_bytes, 0, _bytes.Length);
 			////fileStream.Flush();
 
-			new FolderView().Show();
+			var folderView = new FolderView();
+			do
+			{
+				folderView.Show();
+
+
+			}
 
 			Console.ReadKey();
 		}
@@ -55,28 +61,18 @@ namespace Lesson_21_IO
 		public void Show()
 		{
 			var dirs = Directory.GetDirectories(_basePath).Select(s => new DirectoryInfo(s)).Cast<FileSystemInfo>();
-			dirs.Concat(Directory.GetFiles(_basePath).Select(s => new FileInfo(s)).Cast<FileSystemInfo>());
-			foreach(var item in dirs)
+			dirs = dirs.Concat(Directory.GetFiles(_basePath).Select(s => new FileInfo(s)).Cast<FileSystemInfo>());
+			foreach (var item in dirs)
 			{
 				Console.WriteLine(item.Name);
 			}
 
+		}
 
-			//String mypath = _basePath;
-			//Directory
-			//	.GetFiles(mypath, "*", SearchOption.AllDirectories)
-			//	.ToList()
-			//	.ForEach(f => Console.WriteLine(Path.GetFileName(f)));
-
-			//foreach (var item in Directory.GetDirectories(_basePath))
-			//{
-			//	Console.WriteLine(item);
-			//}
-
-			//foreach (var item in Directory.GetFiles(_basePath))
-			//{
-			//	Console.WriteLine(item);
-			//}
+		public void InFolder(string folder)
+		{
+			_basePath = Path.Combine(_basePath, folder);
+			_basePath = new DirectoryInfo(_basePath).FullName;
 		}
 	}
 }
