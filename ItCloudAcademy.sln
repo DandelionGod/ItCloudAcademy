@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_22_FileManager", "Le
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_23_Serialization", "Lesson_23_Threads\Lesson_23_Serialization.csproj", "{4B83655E-B7AB-4639-AA23-56B58B47DD68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlWork_3", "ControlWork_4\ControlWork_3.csproj", "{427AFAAD-AAD8-4073-86A9-23AF42CA520A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{4B83655E-B7AB-4639-AA23-56B58B47DD68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B83655E-B7AB-4639-AA23-56B58B47DD68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B83655E-B7AB-4639-AA23-56B58B47DD68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{427AFAAD-AAD8-4073-86A9-23AF42CA520A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{427AFAAD-AAD8-4073-86A9-23AF42CA520A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{427AFAAD-AAD8-4073-86A9-23AF42CA520A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{427AFAAD-AAD8-4073-86A9-23AF42CA520A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

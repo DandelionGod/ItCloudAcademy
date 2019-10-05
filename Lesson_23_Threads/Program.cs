@@ -27,8 +27,8 @@ namespace Lesson_23_Serialization
 		public int Salary { get; set; }
 		[XmlIgnore]
 		public TimeSpan WorkingExpiriance { get; set; }
-		[XmlElement(DataType ="duration", ElementName = "WorkingExpiriance")]
-		public long WorkingExpirianceLong { get => WorkingExpiriance.Ticks; set { WorkingExpiriance = TimeSpan.FromDays(365)} }
+		[XmlElement(DataType = "duration", ElementName = "WorkingExpiriance")]
+		public long WorkingExpirianceLong { get => WorkingExpiriance.Ticks; set => WorkingExpiriance = TimeSpan.FromDays(365); }
 		public Work CurrentWork;
 
 		public override string ToString()
@@ -47,7 +47,7 @@ namespace Lesson_23_Serialization
 			var customer = new Customer { Name = "Jon", LastName = "Smith", Age = 44, Salary = 5, WorkingExpiriance = TimeSpan.FromDays(365) };
 			File.WriteAllText(customSerialization, customer.ToString());
 
-			Customer customerXml;
+			//Customer customerXml;
 			Customer customerBin;
 
 			using (var xmlFile = File.OpenWrite("xmlFormat.xml"))
