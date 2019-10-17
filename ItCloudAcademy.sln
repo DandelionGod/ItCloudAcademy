@@ -45,6 +45,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tcpServer", "tcpServer\tcpS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tcpClient", "tcpServer\tcpClient\tcpClient.csproj", "{2C62489E-6DC9-4B42-8FA7-61B2EAB3A16E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatLib", "tcpServer\ChatLib\ChatLib.csproj", "{5DA788FF-FEA9-4CC4-923A-FF11CC6BD21F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{2C62489E-6DC9-4B42-8FA7-61B2EAB3A16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C62489E-6DC9-4B42-8FA7-61B2EAB3A16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C62489E-6DC9-4B42-8FA7-61B2EAB3A16E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DA788FF-FEA9-4CC4-923A-FF11CC6BD21F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DA788FF-FEA9-4CC4-923A-FF11CC6BD21F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DA788FF-FEA9-4CC4-923A-FF11CC6BD21F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DA788FF-FEA9-4CC4-923A-FF11CC6BD21F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
