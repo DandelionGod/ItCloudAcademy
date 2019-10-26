@@ -10,11 +10,11 @@ namespace Lesson1
 	{
 		static void Main(string[] args)
 		{
-			int a;
+			//int a;
 			Console.WriteLine("Hello, World!");
 
 			Console.WriteLine("Pogulyka Ivan Hrihorovych");
-			a = 5;
+			//a = 5;
 			Console.ReadKey();
 		}
 	}
